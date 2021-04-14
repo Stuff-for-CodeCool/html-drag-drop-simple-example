@@ -58,8 +58,10 @@
             }
 
             function drop(e) {
-                e.target.appendChild(dragged);
-                dragged = null;
+                if (e.target.classList.contains("box")) {
+                    e.target.appendChild(dragged);
+                    dragged = null;
+                }
             }
 
             // this is where you drag/drop
